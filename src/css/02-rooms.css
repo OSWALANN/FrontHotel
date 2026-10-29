@@ -1,0 +1,463 @@
+
+/* ===== Rooms page: premium status layout ===== */
+.tablas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.search-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  min-height: 62px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: var(--color-card, #fff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgb(15 23 42 / 4%);
+}
+
+.search-content > i {
+  flex-shrink: 0;
+  color: #087f70;
+  font-size: 24px;
+}
+
+.search-content input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text-primary, #17212f);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.search-content:focus-within {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgb(13 148 136 / 12%);
+}
+
+/* Status indicators sit directly below search, in one horizontal row. */
+.card-estado {
+  width: 100%;
+  min-width: 0;
+  padding: 18px;
+  box-sizing: border-box;
+  background: var(--color-card, #fff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgb(15 23 42 / 4%);
+}
+
+.estado-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.estado-heading h3 {
+  margin: 0;
+  color: var(--color-text-primary, #17212f);
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.estado-heading > span {
+  color: var(--color-text-secondary, #64748b);
+  font-size: .82rem;
+}
+
+.estados {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.estado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.estado:hover {
+  transform: translateY(-2px);
+  border-color: #b7ddd5;
+}
+
+.icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.icono.disponible,
+.estado.disponible .icono {
+  color: #087f70;
+  background: #dff5ee;
+}
+
+.icono.ocupado,
+.estado.ocupado .icono {
+  color: #c2414b;
+  background: #fde8e8;
+}
+
+.icono.reservado,
+.estado.reservado .icono {
+  color: #a16207;
+  background: #fff1d6;
+}
+
+.icono.inhabilitado,
+.estado.inhabilitado .icono {
+  color: #64748b;
+  background: #edf0f4;
+}
+
+.estado-copy {
+  min-width: 0;
+}
+
+.estado-copy span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-text-secondary, #64748b);
+  font-size: .8rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.estado-copy h2 {
+  margin: 0;
+  color: var(--color-text-primary, #17212f);
+  font-size: 1.65rem;
+  font-weight: 650;
+  line-height: 1.1;
+}
+
+/* Room cards */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  width: 100%;
+}
+
+.room-card {
+  border: 1px solid #dce5e9;
+  border-radius: 15px;
+  background: var(--color-card, #fff);
+  box-shadow: 0 5px 18px rgb(15 23 42 / 6%);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgb(15 23 42 / 10%);
+}
+
+.room-card img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 18px;
+}
+
+.room-title {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.room-title h2 {
+  color: var(--color-text-primary, #17212f);
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.room-status {
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 650;
+}
+
+.room-status.disponible {
+  color: #087f70;
+  background: #dff5ee;
+}
+
+.room-status.ocupado {
+  color: #b93842;
+  background: #fde8e8;
+}
+
+.room-status.reservado {
+  color: #9a6708;
+  background: #fff1d6;
+}
+
+.room-status.inhabilitado {
+  color: #64748b;
+  background: #edf0f4;
+}
+
+.room-info p {
+  line-height: 1.6;
+  font-size: .9rem;
+}
+
+.room-add-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 300px;
+  padding: 24px;
+  border: 1.5px dashed #9acfc4;
+  border-radius: 15px;
+  background: rgb(223 245 238 / 35%);
+  color: #087f70;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.room-add-card:hover {
+  border-color: #087f70;
+  background: #dff5ee;
+}
+
+@media (max-width: 1100px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .estados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .tablas {
+    gap: 14px;
+  }
+
+  .search-content {
+    min-height: 54px;
+    padding: 0 14px;
+  }
+
+  .card-estado {
+    padding: 14px;
+  }
+
+  .estado {
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .icono {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .estado-copy h2 {
+    font-size: 1.35rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .room-card img {
+    height: 220px;
+  }
+
+  .estado-heading > span {
+    font-size: .75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .estados {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* FINAL LAYOUT OVERRIDE: search first, status panel directly underneath */
+.tablas {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-auto-flow: row !important;
+  align-items: start;
+  gap: 16px !important;
+  width: 100%;
+}
+
+.tablas > .search-content,
+.tablas > .card-estado {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0;
+}
+
+.tablas > .search-content {
+  grid-row: 1;
+}
+
+.tablas > .card-estado {
+  grid-row: 2;
+}
+
+@media (max-width: 700px) {
+  .estados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .estados {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+
+/* Compact, refined room status summary */
+.tablas {
+  gap: 12px !important;
+  margin-bottom: 18px !important;
+}
+
+.search-content {
+  min-height: 50px !important;
+  padding: 0 16px !important;
+  border-radius: 11px !important;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 3%) !important;
+}
+
+.search-content input {
+  padding: 11px 0 !important;
+  font-size: .95rem !important;
+}
+
+.search-content > i {
+  font-size: 21px !important;
+}
+
+.card-estado {
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 3%) !important;
+}
+
+.estado-heading {
+  margin-bottom: 10px !important;
+}
+
+.estado-heading h3 {
+  font-size: .78rem !important;
+  letter-spacing: .06em;
+}
+
+.estado-heading > span {
+  font-size: .76rem !important;
+}
+
+.estados {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.estado {
+  min-height: 58px;
+  padding: 10px 12px !important;
+  gap: 10px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+.icono {
+  flex: 0 0 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 9px !important;
+  font-size: .82rem !important;
+}
+
+.estado-copy span {
+  margin-bottom: 2px !important;
+  color: #64748b !important;
+  font-size: .76rem !important;
+}
+
+.estado-copy h2 {
+  font-size: 1.3rem !important;
+  line-height: 1.05 !important;
+  color: #17212f !important;
+}
+
+/* Use subtle status accents instead of saturated full-card colors. */
+.estado.disponible,
+.estado.ocupado,
+.estado.reservado,
+.estado.inhabilitado {
+  border-color: #e5eaf0 !important;
+  border-left-width: 3px !important;
+}
+
+.estado.disponible { border-left-color: #0d927b !important; }
+.estado.ocupado { border-left-color: #dc4b50 !important; }
+.estado.reservado { border-left-color: #d99513 !important; }
+.estado.inhabilitado { border-left-color: #94a3b8 !important; }
+
+@media (max-width: 900px) {
+  .estados {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-estado {
+    padding: 10px !important;
+  }
+
+  .estado {
+    padding: 9px !important;
+  }
+}

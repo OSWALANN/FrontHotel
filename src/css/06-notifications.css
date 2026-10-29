@@ -1,0 +1,305 @@
+/* =========================
+
+   NOTIFICATIONS
+
+   ========================= */
+
+
+
+.notifications-page {
+
+  width: 100%;
+
+}
+
+
+
+.notifications-header {
+
+  margin-bottom: 25px;
+
+}
+
+
+
+.notifications-header h1 {
+
+  margin: 0 0 8px;
+
+  font-size: 2.5rem;
+
+  font-weight: 700;
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+.notifications-header p {
+
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  color: var(--color-text-secondary);
+
+}
+
+
+
+.notifications-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  width: 100%;
+
+}
+
+
+
+/* TARJETA */
+
+
+
+.notification-card {
+
+  position: relative;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+
+
+  width: 100%;
+
+  min-height: 120px;
+
+
+
+  padding: 20px 25px;
+
+
+
+  background-color: var(--color-surface);
+
+
+
+  border-radius: 10px;
+
+
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+
+
+  transition:
+
+    transform 0.2s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+
+
+.notification-card:hover {
+
+  transform: translateY(-2px);
+
+
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+/* ICONO */
+
+
+
+.notification-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  width: 50px;
+
+  height: 50px;
+
+
+
+  flex-shrink: 0;
+
+
+
+  margin-right: 20px;
+
+
+
+  border-radius: 10px;
+
+
+
+  background-color: var(--color-bg);
+
+
+
+  color: #3498db;
+
+
+
+  font-size: 1.5rem;
+
+}
+
+
+
+/* CONTENIDO */
+
+
+
+.notification-content {
+
+  flex: 1;
+
+  min-width: 0;
+
+}
+
+
+
+.notification-content h2 {
+
+  margin: 0 0 6px;
+
+
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+.notification-content p {
+
+  margin: 0 0 12px;
+
+
+
+  font-size: 0.85rem;
+
+
+
+  color: var(--color-text-secondary);
+
+}
+
+
+
+/* FECHA Y HORA */
+
+
+
+.notification-date {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+
+
+.notification-date span {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+
+
+  font-size: 0.75rem;
+
+
+
+  color: var(--color-text-secondary);
+
+}
+
+
+
+.notification-date i {
+
+  font-size: 0.9rem;
+
+}
+
+
+
+/* NUEVA */
+
+
+
+.notification-new {
+
+  align-self: flex-start;
+
+
+
+  padding: 5px 10px;
+
+
+
+  border-radius: 20px;
+
+
+
+  background-color: #dcfce7;
+
+
+
+  color: #15803d;
+
+
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+}
+
+
+
+/* NO LEÍDA */
+
+
+
+.notification-card.unread {
+
+  border-left: 4px solid #3498db;
+
+}

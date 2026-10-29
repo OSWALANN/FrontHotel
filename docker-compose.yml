@@ -1,0 +1,9 @@
+services:
+  hotel-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hotel-manager
+    ports:
+      - "8080:80"
+    restart: unless-stopped

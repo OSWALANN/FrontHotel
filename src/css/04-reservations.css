@@ -1,0 +1,477 @@
+/*//////*/
+
+/* ==============================
+
+   RESERVATION HEADER
+
+   ============================== */
+
+
+
+.reservation-header {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.reservation-header h1 {
+
+  margin: 0 0 25px;
+
+  font-size: 2.5rem;
+
+  font-weight: 700;
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+.reservation-header p {
+
+  margin: 0;
+
+  font-size: 1.25rem;
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+
+
+/* ==============================
+
+   RESERVATION CONTAINER
+
+   ============================== */
+
+
+
+.reservation-container {
+
+  display: grid;
+
+
+
+  grid-template-columns: repeat(2, 1fr);
+
+
+
+  gap: 25px 40px;
+
+
+
+  width: 100%;
+
+
+
+  padding: 30px;
+
+
+
+  background-color: var(--color-surface);
+
+
+
+  border-radius: 10px;
+
+
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+
+
+/* ==============================
+
+   FIELDS
+
+   ============================== */
+
+
+
+.reservation-field {
+
+  display: flex;
+
+  flex-direction: column;
+
+
+
+  gap: 8px;
+
+}
+
+
+
+.reservation-field label {
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+
+
+/* ==============================
+
+   TEXT INPUTS
+
+   ============================== */
+
+
+
+.reservation-field input {
+
+  width: 100%;
+
+  height: 55px;
+
+
+
+  padding: 0 15px;
+
+
+
+  border: 1px solid var(--color-border);
+
+
+
+  border-radius: 8px;
+
+
+
+  background-color: white;
+
+
+
+  font-family: "Poppins", sans-serif;
+
+
+
+  font-size: 15px;
+
+
+
+  outline: none;
+
+
+
+  transition: border-color 0.2s ease,
+
+              box-shadow 0.2s ease;
+
+}
+
+
+
+.reservation-field input::placeholder {
+
+  color: #999;
+
+}
+
+
+
+.reservation-field input:focus {
+
+  border-color: #3498db;
+
+
+
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.12);
+
+}
+
+
+
+
+
+/* ==============================
+
+   NUMBER SELECTOR
+
+   ============================== */
+
+
+
+.number-selector {
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+
+
+  width: 100%;
+
+
+
+  height: 55px;
+
+
+
+  border: 1px solid var(--color-border);
+
+
+
+  border-radius: 8px;
+
+
+
+  background-color: white;
+
+
+
+  overflow: hidden;
+
+}
+
+
+
+.number-selector button {
+
+  width: 60px;
+
+
+
+  height: 100%;
+
+
+
+  border: none;
+
+
+
+  background-color: transparent;
+
+
+
+  color: var(--color-text-secondary);
+
+
+
+  font-size: 26px;
+
+
+
+  font-family: "Poppins", sans-serif;
+
+
+
+  cursor: pointer;
+
+
+
+  transition: background-color 0.2s ease,
+
+              color 0.2s ease;
+
+}
+
+
+
+.number-selector button:hover {
+
+  background-color: var(--color-bg);
+
+
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+.number-selector span {
+
+  font-size: 20px;
+
+
+
+  font-weight: 500;
+
+
+
+  color: var(--color-text-primary);
+
+}
+
+
+
+
+
+/* ==============================
+
+   BUTTON
+
+   ============================== */
+
+
+
+.reservation-actions {
+
+  grid-column: 1 / -1;
+
+
+
+  display: flex;
+
+
+
+  justify-content: flex-end;
+
+
+
+  margin-top: 10px;
+
+}
+
+
+
+.reservation-button {
+
+  padding: 12px 25px;
+
+
+
+  border: none;
+
+
+
+  border-radius: 8px;
+
+
+
+  background-color: #3498db;
+
+
+
+  color: white;
+
+
+
+  font-family: "Poppins", sans-serif;
+
+
+
+  font-size: 15px;
+
+
+
+  font-weight: 500;
+
+
+
+  cursor: pointer;
+
+
+
+  transition: 0.2s ease;
+
+}
+
+
+
+.reservation-button:hover {
+
+  background-color: #2587c5;
+
+
+
+  transform: translateY(-1px);
+
+}
+
+
+
+
+
+/* ==============================
+
+   RESPONSIVE
+
+   ============================== */
+
+
+
+@media (max-width: 800px) {
+
+
+
+  .reservation-container {
+
+    grid-template-columns: 1fr;
+
+
+
+    gap: 20px;
+
+  }
+
+
+
+  .reservation-actions {
+
+    grid-column: auto;
+
+
+
+    justify-content: stretch;
+
+  }
+
+
+
+  .reservation-button {
+
+    width: 100%;
+
+  }
+
+
+
+}
+
+
+
+@media (max-width: 500px) {
+
+
+
+  .reservation-container {
+
+    padding: 20px;
+
+  }
+
+
+
+  .reservation-header h1 {
+
+    font-size: 2rem;
+
+  }
+
+
+
+}

@@ -1,0 +1,16 @@
+/* Main stylesheet */
+
+@import url("./01-base.css");
+@import url("./02-rooms.css");
+@import url("./03-dashboard.css");
+@import url("./04-reservations.css");
+@import url("./05-settings.css");
+@import url("./06-notifications.css");
+@import url("./07-reports.css");
+@import url("./08-room-management.css");
+
+@import url("./MainPage.css");
+@import url("./GuestsPage.css");
+
+/* Dark mode debe ir al final */
+@import url("./09-dark-mode.css");

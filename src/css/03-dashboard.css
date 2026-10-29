@@ -1,0 +1,242 @@
+.tablas {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+
+
+.estados {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+}
+
+
+
+.estado {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+
+
+.icono {
+
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+}
+
+
+
+.estado span {
+
+  display: block;
+
+  font-size: 12px;
+
+  color: #888;
+
+}
+
+
+
+.estado h2 {
+
+  margin: 2px 0 0;
+
+  font-size: 24px;
+
+  color: #333;
+
+}
+
+
+
+.disponible {
+
+  background: #22c55e;
+
+}
+
+
+
+.ocupado {
+
+  background: #ef4444;
+
+}
+
+
+
+.reservado {
+
+  background: #f59e0b;
+
+}
+
+
+
+.inhabilitado {
+
+  background: #9ca3af;
+
+}
+
+
+
+.tabla {
+
+
+
+  background: #fff;
+
+  border-radius: 8px;
+
+  padding: 20px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+.main-form {
+
+    padding: 30px;
+
+}
+
+
+
+.main-form label {
+
+    display: block;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.activity-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+
+.activity-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+.activity-card img {
+
+  width: 310px;
+
+  height: 280px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+}
+
+
+
+.main-form-activity {
+
+    flex: 1;
+
+}
+
+
+
+.main-form-activity h3 {
+
+    margin: 0 0 10px 0;
+
+    font-size: 22px;
+
+}
+
+
+
+.main-form-activity p {
+
+    margin: 0;
+
+    font-size: 17px;
+
+}
+
+
+
+.reservation-form {
+
+  display: grid;
+
+  max-width: 360px;
+
+  gap: 8px;
+
+}
+
+.reservation-form input {
+
+  width: 100%;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 8px;
+
+  padding: 0.65rem 0.8rem;
+
+}
+
